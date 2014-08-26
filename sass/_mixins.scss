@@ -20,3 +20,15 @@
 	margin-bottom: 0;
 	max-width: 62.5em;
 }
+
+// REFACTOR THIS 
+.wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+
+	@media screen and (min-width: $baby-bear) {
+		max-width: 80%;
+	}
+}

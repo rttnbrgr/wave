@@ -2596,6 +2596,14 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp; }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+menu, ol, ul {
+  padding: 0; }
+
 .hide {
   display: none; }
 
@@ -2607,13 +2615,14 @@ Copyright (c) 2014 Daniel Eden
   margin-bottom: 0;
   max-width: 62.5em; }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-menu, ol, ul {
-  padding: 0; }
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center; }
+  @media screen and (min-width: 32em) {
+    .wrapper {
+      max-width: 80%; } }
 
 body {
   font-size: 15px !important; }
@@ -2621,7 +2630,8 @@ body {
 a, a:visited {
   color: #BF1D25; }
   a:hover, a:visited:hover {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
 
 a, h1, h2, h3, h4 {
   font-family: 'futura-pt'; }
@@ -2647,84 +2657,23 @@ h2 {
       letter-spacing: 5px;
       margin: 0.2em 0; } }
 
+h3 {
+  position: absolute;
+  color: #BF1D25;
+  margin: 1.5em auto;
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+  font-size: 2em;
+  background-color: #fff; }
+
 body {
   height: 100%;
   background: url("/assets/img/blackorchid_@2x.jpg") top left repeat;
   background-attachment: fixed;
   background-size: cover; }
 
-header {
-  display: block;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  z-index: 1031; }
-  header > a > img {
-    position: fixed;
-    z-index: 1031;
-    max-width: 120px;
-    margin-left: -60px;
-    margin-top: 1em; }
-    @media only screen and (min-width: 40.063em) {
-      header > a > img {
-        max-width: 200px;
-        margin-left: -100px; } }
-
-body {
-  background: url("/assets/img/rare2.jpg") center center no-repeat;
-  background-size: cover; }
-
-h2.coming-soon {
-  text-align: center;
-  font-weight: bold;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #BF1D25;
-  letter-spacing: 1px;
-  font-size: 1.6em;
-  line-height: 1;
-  margin: 1.3em 0;
-  color: white; }
-  @media screen and (min-width: 32em) {
-    h2.coming-soon {
-      font-size: 3em;
-      margin: 0.5em 0; } }
-  @media screen and (min-width: 50em) {
-    h2.coming-soon {
-      font-size: 5em;
-      letter-spacing: 5px;
-      margin: 0.2em 0; } }
-
-#hero2 {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1; }
-  #hero2:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: #4d4d4d;
-    opacity: 0.7; }
-
-a:hover {
-  text-decoration: none; }
-
-.wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 1em;
-  text-align: center; }
-  @media screen and (min-width: 32em) {
-    .wrapper {
-      max-width: 80%; } }
-
-a.rare-btn, .hover-tile-outer .hover-tile-hidden a.social {
+a.rare-btn, a.social {
   width: 100%;
   padding: 0.5em;
   display: block;
@@ -2739,19 +2688,37 @@ a.rare-btn, .hover-tile-outer .hover-tile-hidden a.social {
   border: 3px solid white;
   color: white;
   transition: all 0.3s ease; }
-  a.rare-btn > span, .hover-tile-outer .hover-tile-hidden a.social > span {
+  a.rare-btn > span, a.social > span {
     padding-left: 0.5em; }
-  a.rare-btn:hover, .hover-tile-outer .hover-tile-hidden a.social:hover {
+  a.rare-btn:hover, a.social:hover {
     background-color: #fff;
     color: #BF1D25; }
   @media screen and (min-width: 50em) {
-    a.rare-btn, .hover-tile-outer .hover-tile-hidden a.social {
+    a.rare-btn, a.social {
       display: inline-block;
       width: inherit;
       padding: 0.5em 2em;
       margin-right: 2em; }
-      a.rare-btn:last-child, .hover-tile-outer .hover-tile-hidden a.social:last-child {
+      a.rare-btn:last-child, a.social:last-child {
         margin-right: 0; } }
+
+header {
+  display: block;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 1031;
+  top: 0; }
+  header > a > img {
+    position: fixed;
+    z-index: 1031;
+    max-width: 120px;
+    margin-left: -60px;
+    margin-top: 1em; }
+    @media only screen and (min-width: 40.063em) {
+      header > a > img {
+        max-width: 200px;
+        margin-left: -100px; } }
 
 svg.logo {
   background-color: #BF1D25;
@@ -2769,6 +2736,56 @@ svg.logo {
       max-height: 6em;
       padding: 1.5em;
       margin-bottom: 7em; } }
+
+h1.coming-soon {
+  text-align: center;
+  font-weight: bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #BF1D25;
+  letter-spacing: 1px;
+  font-size: 1.6em;
+  line-height: 1;
+  margin: 1.3em 0;
+  color: white; }
+  @media screen and (min-width: 32em) {
+    h1.coming-soon {
+      font-size: 3em;
+      margin: 0.5em 0; } }
+  @media screen and (min-width: 50em) {
+    h1.coming-soon {
+      font-size: 5em;
+      letter-spacing: 5px;
+      margin: 0.4em 0; } }
+
+#hero2 {
+  position: fixed;
+  top: 15%;
+  width: 100%; }
+  @media screen and (min-width: 32em) {
+    #hero2 {
+      top: 35%; } }
+  #hero2:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #4d4d4d;
+    opacity: 0.7; }
+  #hero2:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background: url("/assets/img/rare2.jpg") center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover; }
 
 nav {
   position: fixed;
@@ -2801,7 +2818,6 @@ nav {
   width: 100%;
   padding-top: 10em;
   background: url("/assets/img/rare2.jpg") center center no-repeat;
-  background-color: yellow;
   background-attachment: fixed;
   background-size: cover; }
 
@@ -2810,8 +2826,7 @@ nav {
   width: 60%;
   max-width: 1280px;
   margin: 0 auto 0;
-  padding: 0.5em;
-  border: 5px solid #BF1D25; }
+  padding: 0.5em; }
   #cinema.lightsDown {
     border: 0px solid;
     background-color: #000;
@@ -2826,7 +2841,7 @@ a.play-button {
   width: 100%;
   z-index: 2;
   color: #BF1D25;
-  font-size: 3.5em;
+  font-size: 5em;
   top: 39%; }
   a.play-button:hover {
     color: #fff; }
@@ -2844,9 +2859,13 @@ a.play-button {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
-  .flex-video iframe.unplayed, .flex-video iframe.paused {
-    visibility: hidden; }
+    height: 100%;
+    -webkit-transition: opacity, 0.3s ease-in;
+    -moz-transition: opacity, 0.3s ease-in;
+    transition: opacity, 0.3s ease-in; }
+  .flex-video iframe.unplayed,
+  .flex-video iframe.paused {
+    opacity: 0; }
 
 #profile {
   width: 100%;
@@ -2855,27 +2874,50 @@ a.play-button {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5em;
-  background-color: green;
   overflow: hidden;
-  margin-top: 2em; }
+  margin: 3em 0; }
 
 .profile-card-outer {
-  width: 50%;
-  float: left;
+  width: 100%;
   padding: 0;
   height: 20em;
   cursor: pointer;
   background-position: bottom;
   background-size: cover; }
+  @media screen and (min-width: 50em) {
+    .profile-card-outer {
+      width: 50%;
+      float: left; } }
   .profile-card-outer#stanley {
-    background-image: url("../img/vaughn.jpg");
+    background-image: url("/assets/img/vaughn.jpg");
     background-position: top; }
   .profile-card-outer#rolex {
-    background-image: url("../img/req.jpg"); }
+    background-image: url("/assets/img/req.jpg"); }
+  .profile-card-outer .profile-card-container {
+    height: 20em;
+    overflow: hidden; }
+    .profile-card-outer .profile-card-container:hover > .profile-card {
+      -webkit-transform: translate(0, -100%);
+      -moz-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+      -o-transform: translate(0, -100%);
+      transform: translate(0, -100%); }
+    .profile-card-outer .profile-card-container .profile-card-visible {
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      position: relative; }
+    .profile-card-outer .profile-card-container .profile-card-hidden {
+      background: rgba(255, 255, 255, 0.5);
+      text-align: center; }
 
 .profile-card {
-  height: 20em;
-  overflow: hidden; }
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  background: inherit;
+  color: white;
+  height: inherit;
+  padding: 7em 1.5em 0; }
 
 .hover-tile-outer {
   height: 20em;
@@ -2886,15 +2928,6 @@ a.play-button {
     background-image: url("/assets/img/vaughn.jpg"); }
   .hover-tile-outer#rolex {
     background-image: url("/assets/img/req.jpg"); }
-  .hover-tile-outer .hover-tile-container {
-    height: 20em;
-    overflow: hidden; }
-  .hover-tile-outer .hover-tile-container:hover > .hover-tile {
-    -webkit-transform: translate(0, -100%);
-    -moz-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    -o-transform: translate(0, -100%);
-    transform: translate(0, -100%); }
   .hover-tile-outer .hover-tile {
     -webkit-transition: all, 0.2s ease-in-out;
     -moz-transition: all, 0.2s ease-in-out;
@@ -2910,25 +2943,37 @@ a.play-button {
   .hover-tile-outer .hover-tile-hidden {
     background: rgba(255, 255, 255, 0.5);
     text-align: center; }
-    .hover-tile-outer .hover-tile-hidden a.social {
-      border-color: #BF1D25;
-      color: #BF1D25; }
-      .hover-tile-outer .hover-tile-hidden a.social:first-child {
-        margin-right: 1em; }
-      .hover-tile-outer .hover-tile-hidden a.social:hover {
-        color: #fff;
-        background-color: #BF1D25; }
+
+a.social {
+  border-color: #BF1D25;
+  color: #BF1D25; }
+  a.social:first-child {
+    margin-right: 1em; }
+  a.social:hover {
+    color: #fff;
+    background-color: #BF1D25; }
 
 #lookBook {
   width: 100%;
   white-space: nowrap;
-  background-color: #BF1D25;
   overflow: auto;
   overflow-y: hidden;
-  margin: 1em auto; }
+  margin: 3em auto;
+  padding: 2em 0; }
   #lookBook img {
     display: inline;
-    width: 150px; }
+    width: 150px;
+    margin-right: -4px;
+    position: relative; }
+    #lookBook img:hover {
+      cursor: pointer; }
+      #lookBook img:hover:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+        outline: 1px solid pink;
+        z-index: 10; }
 
 .space {
   font-size: 0;

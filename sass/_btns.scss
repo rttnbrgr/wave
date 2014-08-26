@@ -1,0 +1,50 @@
+a.rare-btn {
+	width: 100%;
+	padding: 0.5em;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'futura-pt';
+	font-weight: 700;
+	margin-bottom: 1em;
+	max-width: 17em;
+	
+	// ON DARK	
+	border: 3px solid white;
+	color: white;
+	// ON LIGHT
+	// border: 3px solid $red;
+	// color: $red;
+
+	transition: all 0.3s ease;
+
+	> span {
+		padding-left: 0.5em;
+	}
+
+	&:hover {		
+		
+		// ON DARK
+		background-color: #fff;
+		color: $red;
+		// ON LIGHT
+		// background-color: $red;
+		// color: white;
+
+
+
+	}
+
+	@media screen and (min-width: $mama-bear) {
+		display: inline-block;
+		width: inherit;
+		padding: 0.5em 2em;
+		margin-right: 2em;
+		&:last-child {
+			margin-right: 0;
+		}
+		
+	}
+}

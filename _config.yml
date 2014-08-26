@@ -10,3 +10,7 @@ github_username:  tayox
 # Build settings
 markdown: kramdown
 permalink: pretty
+exclude: 
+- /DESIGN
+- /sass
+- README.md

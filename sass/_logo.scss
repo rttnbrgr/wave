@@ -1,0 +1,25 @@
+// SVG SHIZ-NIT
+// ------------------------
+
+svg.logo {
+	background-color: $red;
+	padding: 2.5em;
+	width: 100%;
+	// max-width: 28em;
+	// max-height: 11em;
+	max-height: 9em;
+	margin: 0 auto;
+	display: block;
+	
+	path { fill: white; }
+
+	@media screen and (min-width: $baby-bear) {
+		margin-top: 2em;
+		max-width: 13em;
+		max-height: 6em;
+		padding: 1.5em;
+		margin-bottom: 7em;
+	}
+
+
+}
