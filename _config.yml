@@ -1,0 +1,12 @@
+# Site settings
+title: T h e  R a r i t y
+email: iamreq@gmail.com
+description: "The Rarity is Rare"
+baseurl: ""
+url: "http://the-rarity.com"
+twitter_username: iamreq
+github_username:  tayox
+
+# Build settings
+markdown: kramdown
+permalink: pretty

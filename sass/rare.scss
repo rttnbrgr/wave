@@ -1,0 +1,129 @@
+// TOOLS
+// -----------------------------------------------
+
+// HTML5 BOILERPLATE
+@import "normalize";
+// BOWER
+@import "bourbon/bourbon.scss";
+// ANIMATE
+@import "animate";
+
+
+// HELPERS
+// @import "helpers";
+.hide {
+	display: none;
+}
+
+
+
+// MIXINS
+@import "mixins";
+
+
+// BASE
+// -----------------------------------------------
+
+// BITS
+@import 'bits';
+// VARS
+@import 'vars';
+
+
+// TYPOGRAPHY
+@import 'typography';
+
+// BODY
+@import "body";
+
+
+
+// MODULES
+// -----------------------------------------------
+
+// HEADER
+@import "header";
+
+// COMING SOON
+@import 'coming-soon';
+
+// NAVIGATION
+// @import "nav";
+nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $red;
+	text-align: center;
+
+	display: none;		
+
+	ul {
+		margin-top: 10em;
+	}
+
+	a {
+		color: $red-dark;
+		font-weight: bold;
+		font-weight: 700;
+		line-height: 1.7;
+		font-size: 2em;
+		letter-spacing: 2px;
+
+		&.close {
+			// background-color: green;
+			// margin: 1.2em auto;
+			display: block;			
+			padding: 0.5em;
+			line-height: 1;
+			font-size: 4em;
+	
+			
+			
+			// border-radius: 50%;
+			// font-size: 1.5em;
+
+		}
+	}
+
+}
+
+// HERO
+@import "hero";
+
+
+// PROFILE
+@import 'profile';
+
+// LOOKBOOK
+// @import 'lookbook';
+#lookBook {
+
+	width: 100%;
+	white-space: nowrap;
+	background-color: $red;
+	overflow: auto;
+	overflow-y: hidden;
+	margin: 1em auto;
+
+	img {
+		display: inline;
+		width: 150px;
+	}
+}
+
+
+
+
+
+
+//
+// ------------------------
+
+.space {
+	font-size: 0;
+	margin-bottom: 1000px;
+	height: 1000px;
+}

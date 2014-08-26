@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- JEKYLLCSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <!-- WAVVY STYLES -->
+    <link rel="stylesheet" href="/css/rare.css">
+    <!-- TYPEKIT -->
+    <script type="text/javascript" src="//use.typekit.net/sin3tul.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- FONT AWESOME -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- MODERNIZR -->
+    <!-- // <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+    
+    <!-- JAVASCRIPT -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>

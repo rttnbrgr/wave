@@ -1,0 +1,53 @@
+body {
+	font-size: 15px!important;
+}
+
+a, a:visited {
+	color: $red;
+	
+	&:hover {
+		color: $white;
+	}
+}
+
+a, h1, h2, h3, h4 {
+	font-family: 'futura-pt';
+}
+
+h1 {}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	
+	
+	letter-spacing: 1px;
+	font-size: 1.6em;
+	line-height: 1;
+	
+	margin: 1.3em 0;
+	padding: 0.3em 0;
+	
+	// color: $red;
+	// border: 5px solid $red;
+
+	color: white;
+	background-color: $red;
+	
+	@media screen and (min-width: $baby-bear) {
+		font-size: 2.3em;
+		margin: 0.5em 0;
+	}
+
+	@media screen and (min-width: $mama-bear) {
+		// font-size: 5em;
+		letter-spacing: 5px;
+		margin: 0.2em 0;
+
+
+	}
+}
+

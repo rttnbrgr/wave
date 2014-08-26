@@ -1,0 +1,27 @@
+// HEADER
+// ------------------------
+
+header {
+	display: block;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	z-index: 1031;
+
+	// this should be an svg
+	> a > img {
+		position: fixed;
+		z-index: 1031;
+		// margin: 1em auto;
+		
+		max-width: 120px;
+		margin-left: -60px;
+		margin-top: 1em;
+
+		@media only screen and (min-width: 40.063em) { 
+			max-width: 200px;
+			margin-left: -100px;
+			// margin: 0 auto;
+		}
+	}
+}
