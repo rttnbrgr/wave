@@ -13,22 +13,30 @@
 }
 
 .row {
+	position: relative;
+	margin: 0 auto;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
 	max-width: 62.5em;
+	
 }
 
 // REFACTOR THIS 
 .wrapper {
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 1em;
+	overflow: hidden;
+	// padding: 1em;
 	text-align: center;
 
-	@media screen and (min-width: $baby-bear) {
-		max-width: 80%;
+}
+
+
+// HALF COLUMN 
+.column {
+	width: 100%;
+	
+	@include bp(wale) {
+		width: 50%;
+		float: left;
 	}
 }

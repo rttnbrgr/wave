@@ -1,5 +1,4 @@
-// HEADER
-// ------------------------
+// HEADER & LOGO
 
 header {
 	display: block;
@@ -7,22 +6,54 @@ header {
 	position: absolute;
 	text-align: center;
 	z-index: 1031;
-	top: 0;
+	top: 0;	
+}
 
-	// this should be an svg
-	> a > img {
-		position: fixed;
-		z-index: 1031;
-		// margin: 1em auto;
-		
-		max-width: 120px;
-		margin-left: -60px;
-		margin-top: 1em;
+a.rare-logo {
+	display: block;
+	overflow: hidden;	
+	margin: 1em auto;
+	width: 50%;
+	max-width: 13em;
+	
+	@include transition(all, 0.3s ease);
 
-		@media only screen and (min-width: 40.063em) { 
-			max-width: 200px;
-			margin-left: -100px;
-			// margin: 0 auto;
-		}
+	@include bp(wale) {
+		margin-top: 2em;
 	}
+
+
+}
+
+svg.logo {
+	
+	path { fill: white; }
+	background-color: $red;
+	
+	display: block;
+	margin: 0 auto;
+	padding: 1.5em;
+	width: 100%;
+
+	// BP COLOR TEST
+	// @include bp(wale) {
+	// 	background-color: green;
+	// }
+	// @include bp(drake) {
+	// 	background-color: purple;
+	// }
+	// @include bp(cudi) {
+	// 	background-color: blue;
+	// }
+
+}
+
+@media only screen and (max-device-width : $wale) and (orientation : landscape) {
+	// shrink logo 
+	a.rare-logo { 
+		max-width: 8em; 
+
+		// adjust padding
+		> svg.logo { padding: 1em; }
+	}		
 }

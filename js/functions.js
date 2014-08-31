@@ -18,3 +18,30 @@ jQuery('a.heroVid').click(function(){
 	autoPlayVideo('vtj2NB6GDDY', '1280', '720');
 	$('#cinema').toggleClass('lightsDown');
 });
+
+
+
+// 
+
+// function navToggle(){
+// 	$(a.nav-toggle).click(function(){
+// 		console.log('fun');
+// 	})
+// }
+
+
+// TOGGLE NAV
+// totally needs a refactor, just for now;
+$('a.nav-toggle').click(function(){
+	var nav = $('nav');
+	
+	console.log('fun');
+	$('nav').slideToggle();
+	
+	
+});
+
+$('nav a').click(function() {
+	console.log('more fun');
+	$('nav').slideToggle();
+});

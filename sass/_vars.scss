@@ -21,3 +21,29 @@ $baby-bear: 32em;
 
 // 1005
 $mama-bear: 50em;
+
+// 600px, 
+$wale: 40em;
+$drake: 60em; 
+$cudi: 90em;
+
+
+@mixin bp($point) {
+	
+	$bp-wale:   "(min-width: #{$wale} )";
+	$bp-drake:  "(min-width: #{$drake} )";
+	$bp-cudi:   "(min-width: #{$cudi} )";
+
+	@if $point == wale {
+		@media #{$bp-wale} { @content; }
+	}
+	
+	@else if $point == drake {
+		@media #{$bp-drake} { @content; }
+	}
+	
+	@else if $point == cudi {
+		@media #{$bp-cudi}  { @content; }
+	}
+
+}

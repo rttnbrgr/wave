@@ -4,5 +4,16 @@
  }
 
 menu, ol, ul {
-	padding: 0;
+	padding: 0;	
 }
+
+ul, ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+// HELPER CLASSS
+.hide { display: none; }

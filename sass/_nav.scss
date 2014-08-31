@@ -1,0 +1,67 @@
+nav {
+	display: none;
+	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $red;
+	text-align: center;
+
+	z-index: 3;
+
+
+	ul {
+		margin-top: 10em;
+	}
+
+	a, a:visited {
+		color: $red-dark;
+		font-weight: bold;
+		font-weight: 700;
+		line-height: 1.7;
+		font-size: 2em;
+		letter-spacing: 2px;
+
+		&.close {
+			display: block;			
+			padding: 0.5em;
+			line-height: 1;
+			font-size: 4em;
+		}
+	}
+
+	@media only screen and (max-device-width : $wale) and (orientation : landscape) {
+
+		background-color: blue;
+
+	}
+
+	// after @mobile
+	@include bp(wale) {
+		bottom: inherit;
+		// background-color: transparentize($white, 0.5);
+		// top: inherit;
+		// position: absolute;
+		
+		// right: inherit;
+		// margin: 0 auto;
+
+		// > ul {
+		// 	margin: 0;
+
+		// 	a {
+		// 		float: left;
+		// 		width: 25%;
+		// 		color: $red;
+		// 	}
+		// }
+
+		// a.close {
+		// 	display: none;
+		// }
+
+	}
+
+}

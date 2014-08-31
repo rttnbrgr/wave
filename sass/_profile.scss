@@ -1,16 +1,13 @@
-#profile {
-	@include row;
-	// background-color: green;
-	overflow: hidden;
-	margin: 3em 0;
+section {
+	margin: 4em auto;
 }
 
-//
-// THE BOURBON REFILL STYLE
-// ------------------------------------------------
 
-// $hover-tile-height: 10em;
-// $hover-tile-height: 20em;
+#profile {
+	// @include row;
+	// background-color: green;
+	overflow: hidden;	
+}
 
 $profile-card-height: 20em;
 
@@ -19,7 +16,9 @@ $base-line-height: 1.5em;
 
 
 // RE-CLASSIFIED STYLES -----------------------------------------------------------------
-.profile-row {	
+.profile-row {
+	@include row;
+	overflow: hidden;
 }
 
 .profile-card-outer {
@@ -53,6 +52,18 @@ $base-line-height: 1.5em;
 			@include transform(translate(0, -100%));
 		}
 
+		.profile-card {
+			// @include transition(all, .2s ease-in-out);
+			-webkit-transition: all, 0.2s ease-in-out;
+			-moz-transition: all, 0.2s ease-in-out;
+			transition: all, 0.2s ease-in-out;
+
+			background: inherit;
+			color: white;
+			height:inherit;
+			padding: 7em 1.5em 0;
+		}
+
 		.profile-card-visible {
 			color: transparentize(white, .3);
 			text-align: center;
@@ -69,107 +80,13 @@ $base-line-height: 1.5em;
 	}
 }
 
-.profile-card {
-	// @include transition(all, .2s ease-in-out);
-	-webkit-transition: all, 0.2s ease-in-out;
-	-moz-transition: all, 0.2s ease-in-out;
-	transition: all, 0.2s ease-in-out;
 
-	background: inherit;
-	color: white;
-	height:inherit;
-	padding: 7em 1.5em 0;
-}
-
-
-
-
-// HACKED ORIG'NAL STYLES -----------------------------------------------------------------
-
-.hover-tile-outer {
-	height: $profile-card-height;
-	// margin-bottom: $base-line-height;
-	cursor: pointer;
-
-	background-position: bottom;
-	background-size: cover;
-	
-	// background-color: #BEB56E;
-	// border: 1px solid $base-border-color;
-	
-	&#stanley {
-		background-image: url('/assets/img/vaughn.jpg');	
-	}
-	&#rolex {
-		background-image: url('/assets/img/req.jpg');
-	}
-	
-	// the container
-	// .hover-tile-container {
-	// 	height: $profile-card-height;
-	// 	overflow: hidden;
-	// }
-
-	.hover-tile-container:hover > .hover-tile {
-		// @include transform(translate(0, -100%));
-
-		// -webkit-transform: translate(0, -100%);
-		// -moz-transform: translate(0, -100%);
-		// -ms-transform: translate(0, -100%);
-		// -o-transform: translate(0, -100%);
-		// transform: translate(0, -100%);
-		
-		// my attempt at a compass mixin
-		// @include translateY(0, -100%);
-	}
-
-	.hover-tile {
-		// @include transition(all, .2s ease-in-out);
-		-webkit-transition: all, 0.2s ease-in-out;
-		-moz-transition: all, 0.2s ease-in-out;
-		transition: all, 0.2s ease-in-out;
-
-		background: inherit;
-		color: white;
-		height:inherit;
-		padding: 7em 1.5em 0;
-	}
-
-	.hover-tile-visible {
-		color: transparentize(white, .3);
-		// font-size: 2em;
-		// font-weight: 200;  
-		// padding-top: 2em;
-		text-align: center;
-
-		position: relative;
-		
-		
-	}
-
-	.hover-tile-hidden {
-		background: transparentize(white, .5);
-		text-align: center;
-		// padding-top: 7em;
-
-		// h4 { margin-bottom: .5em; }
-		// p { color: transparentize(white, .3); }
-
-		
-	}
-}
 
 
 a.social {
 	@extend .rare-btn;
 	border-color: $red;
 	color: $red;
-
-	// text-align: center;
-	// font-size: 3em;
-	// padding: 0.5em;
-
-
 
 	&:first-child {
 		margin-right: 1em;
