@@ -2601,6 +2601,9 @@ Copyright (c) 2014 Daniel Eden
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
 menu, ol, ul {
   padding: 0; }
 
@@ -2677,10 +2680,10 @@ h3 {
 
 body {
   height: 100%;
-  background: url("/assets/img/blackorchid.png") top left repeat; }
+  background: url("../assets/img/blackorchid.png") top left repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     body {
-      background: url("/assets/img/blackorchid_@2x.jpg") top left repeat;
+      background: url("../assets/img/blackorchid_@2x.jpg") top left repeat;
       background-size: 300px 300px; } }
 
 a.rare-btn, a.social {
@@ -2802,7 +2805,7 @@ h1.coming-soon {
     right: 0;
     bottom: 0;
     z-index: -2;
-    background: url("/assets/img/rare2.jpg") center center no-repeat;
+    background: url("../assets/img/rare2.jpg") center center no-repeat;
     background-attachment: fixed;
     background-size: cover; }
 
@@ -2843,7 +2846,7 @@ nav {
   height: 100%;
   width: 100%;
   padding-top: 10em;
-  background: url("/assets/img/rare2.jpg") center center no-repeat;
+  background: url("../assets/img/rare2.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
 
@@ -2929,10 +2932,10 @@ section {
       width: 50%;
       float: left; } }
   .profile-card-outer#stanley {
-    background-image: url("/assets/img/vaughn.jpg");
+    background-image: url("../assets/img/vaughn.jpg");
     background-position: top; }
   .profile-card-outer#rolex {
-    background-image: url("/assets/img/req.jpg"); }
+    background-image: url("../assets/img/req.jpg"); }
   .profile-card-outer .profile-card-container {
     height: 20em;
     overflow: hidden; }

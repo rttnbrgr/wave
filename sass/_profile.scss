@@ -38,11 +38,11 @@ $base-line-height: 1.5em;
 	}
 
 	&#stanley { 
-		background-image: url('/assets/img/vaughn.jpg');	
+		background-image: url('../assets/img/vaughn.jpg');	
 		background-position: top;
 	}
 
-	&#rolex {  background-image: url('/assets/img/req.jpg'); }
+	&#rolex {  background-image: url('../assets/img/req.jpg'); }
 
 	.profile-card-container {
 		height: $profile-card-height;
